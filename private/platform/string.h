@@ -38,6 +38,7 @@
 #define _PLATFORM_OPTIMIZED_MEMCCPY 0
 #define _PLATFORM_OPTIMIZED_MEMCHR 0
 #define _PLATFORM_OPTIMIZED_MEMCMP 0
+#define _PLATFORM_OPTIMIZED_MEMCMP_ZERO_ALIGNED8 0
 #define _PLATFORM_OPTIMIZED_MEMMOVE 0
 #define _PLATFORM_OPTIMIZED_MEMSET 0
 #define _PLATFORM_OPTIMIZED_MEMSET_PATTERN4 0
@@ -73,6 +74,10 @@ _platform_memcmp(const void *s1, const void *s2, size_t n);
 __OSX_AVAILABLE_STARTING(__MAC_10_9,__IPHONE_7_0)
 void *
 _platform_memmove(void *dst, const void *src, size_t n);
+
+/* whether n bytes at s (both 8-byte aligned) are all zero: 0 if so, 1 otherwise */
+unsigned long
+_platform_memcmp_zero_aligned8(const void *s, size_t n);
 
 __OSX_AVAILABLE_STARTING(__MAC_10_9,__IPHONE_7_0)
 void *
