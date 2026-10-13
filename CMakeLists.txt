@@ -83,6 +83,7 @@ set(platform_sources
 	src/string/generic/memccpy.c
 	src/string/generic/memchr.c
 	src/string/generic/memcmp.c
+	src/string/generic/memcmp_zero.c
 	src/string/generic/memmove.c
 	src/string/generic/memset_pattern.c
 	src/string/generic/strchr.c
